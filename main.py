@@ -32,10 +32,10 @@ html, body, [class*="css"]  {
 
 .hero {
     background: linear-gradient(135deg,#ffe9e3,#fff0f5);
-    padding: 60px;
-    border-radius: 25px;
+    padding: 70px 40px;
+    border-radius: 30px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     color: #222;
 }
 
@@ -143,12 +143,23 @@ input, textarea {
 
 st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="hero">', unsafe_allow_html=True)
+# ---------------- HERO SECTION ----------------
 
-st.image(
-    "logo.jpeg",
-    width=220
-)
+st.markdown("""
+<div class="hero">
+""", unsafe_allow_html=True)
+
+# CENTER LOGO
+
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.image(
+        "images/logo.jpeg",
+        width=250
+    )
+
+# TITLE
 
 st.markdown("""
 <div class="hero-title">
