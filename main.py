@@ -296,10 +296,7 @@ col1, col2, col3 = st.columns(3)
 # ---------------- VEIN TEST ----------------
 
 with col1:
-    st.image(
-    "https://images.unsplash.com/photo-1517841905240-472988babdf9",
-    width=320
-)
+
 
     st.markdown("""
     <div class="card">
@@ -321,10 +318,7 @@ with col1:
 
 with col2:
 
-    st.image(
-    "https://images.unsplash.com/photo-1496747611176-843222e1e57c",
-    width=320
-)
+    
 
     st.markdown("""
     <div class="card">
@@ -345,10 +339,7 @@ with col2:
 # ---------------- SUN TEST ----------------
 
 with col3:
-    st.image(
-    "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
-    width=320
-)
+    
 
     st.markdown("""
     <div class="card">
