@@ -32,30 +32,40 @@ html, body, [class*="css"]  {
 
 .hero {
     background: linear-gradient(135deg,#ffe9e3,#fff0f5);
-    padding: 60px 40px;
+    padding: 70px 40px;
     border-radius: 30px;
     margin-bottom: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
 }
+
+/* HERO LOGO */
+
+.hero-logo {
+    width: 220px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+/* HERO TITLE */
 
 .hero-title {
     font-size: 72px;
     font-weight: 700;
     color: #8a5238;
-    margin-top: 15px;
     margin-bottom: 10px;
 }
+
+/* HERO TAGLINE */
 
 .hero-tagline {
     font-size: 28px;
     color: #444;
-    margin-top: 0px;
-}
-
-/* CENTER STREAMLIT IMAGE */
-
-[data-testid="stImage"] {
-    text-align: center;
 }
 /* NAVBAR */
 
@@ -146,27 +156,25 @@ st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 
 # ---------------- HERO SECTION ----------------
 
-st.markdown("""
+import base64
+
+# convert image to base64
+with open("images/logo.jpeg", "rb") as image_file:
+    encoded = base64.b64encode(image_file.read()).decode()
+
+st.markdown(f"""
 <div class="hero">
 
-<div style="text-align:center;">
-""", unsafe_allow_html=True)
+    <img src="data:image/jpeg;base64,{encoded}" class="hero-logo">
 
-# LOGO
-st.image(
-    "logo.jpeg",
-    width=220
-)
+    <div class="hero-title">
+        Hue & Me
+    </div>
 
-# TITLE + TAGLINE
-st.markdown("""
-<h1 class="hero-title">Hue & Me</h1>
+    <div class="hero-tagline">
+        Because every you has a perfect hue ✨
+    </div>
 
-<p class="hero-tagline">
-Because every you has a perfect hue ✨
-</p>
-
-</div>
 </div>
 """, unsafe_allow_html=True)
 
