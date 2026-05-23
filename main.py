@@ -67,6 +67,8 @@ html, body, [class*="css"]  {
     font-size: 28px;
     color: #444;
 }
+
+
 /* NAVBAR */
 
 .navbar {
@@ -158,14 +160,15 @@ st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 
 import base64
 
-# convert image to base64
+# convert logo to base64
 with open("logo.jpeg", "rb") as image_file:
-    encoded = base64.b64encode(image_file.read()).decode()
+    encoded_string = base64.b64encode(image_file.read()).decode()
 
-st.markdown(f"""
+hero_html = f"""
 <div class="hero">
 
-    <img src="data:image/jpeg;base64,{encoded}" class="hero-logo">
+    <img class="hero-logo"
+    src="data:image/jpeg;base64,{encoded_string}">
 
     <div class="hero-title">
         Hue & Me
@@ -176,8 +179,9 @@ st.markdown(f"""
     </div>
 
 </div>
-""", unsafe_allow_html=True)
+"""
 
+st.markdown(hero_html, unsafe_allow_html=True)
 st.markdown("""
 <div class="card">
 
