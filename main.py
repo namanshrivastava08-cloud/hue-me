@@ -160,15 +160,18 @@ st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 
 import base64
 
-# convert logo to base64
+# READ IMAGE
 with open("logo.jpeg", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
+# HERO HTML
 hero_html = f"""
 <div class="hero">
 
-    <img class="hero-logo"
-    src="data:image/jpeg;base64,{encoded_string}">
+    <img 
+        src="data:image/jpeg;base64,{encoded_string}" 
+        class="hero-logo"
+    >
 
     <div class="hero-title">
         Hue & Me
@@ -182,6 +185,7 @@ hero_html = f"""
 """
 
 st.markdown(hero_html, unsafe_allow_html=True)
+
 st.markdown("""
 <div class="card">
 
