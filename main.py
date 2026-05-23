@@ -159,7 +159,7 @@ st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 import base64
 
 # convert image to base64
-with open("images/logo.jpeg", "rb") as image_file:
+with open("logo.jpeg", "rb") as image_file:
     encoded = base64.b64encode(image_file.read()).decode()
 
 st.markdown(f"""
