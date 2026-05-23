@@ -296,8 +296,7 @@ col1, col2, col3 = st.columns(3)
 # ---------------- VEIN TEST ----------------
 
 with col1:
-
-   st.image(
+    st.image(
     "https://images.unsplash.com/photo-1517841905240-472988babdf9",
     width=320
 )
