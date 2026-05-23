@@ -280,60 +280,117 @@ for title, points, tip in body_types:
 
 st.markdown('<div id="undertone"></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="section-title">Find Your Skin Undertone ✨</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-title">Find Your Skin Undertone ✨</div>',
+    unsafe_allow_html=True
+)
 
-st.markdown("""
-<div class="card">
+st.write("""
+The secret behind colors that make you glow?
+Your skin undertone helps you discover shades that naturally suit you.
+""")
 
-<h3>01 — The Vein Test</h3>
+col1, col2, col3 = st.columns(3)
 
-Blue or purple veins → <b>Cool undertone</b><br>
-Green veins → <b>Warm undertone</b><br>
-A mix of both → <b>Neutral undertone</b>
+# VEIN TEST
+with col1:
 
-<br><br>
+    st.image(
+        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f",
+        use_container_width=True
+    )
 
-<h3>02 — The Jewelry Test</h3>
+    st.markdown("""
+    <div class="card">
 
-Silver looks better → <b>Cool undertone</b><br>
-Gold looks better → <b>Warm undertone</b><br>
-Both look great → <b>Neutral undertone</b>
+    <h3>01 — The Vein Test</h3>
 
-<br><br>
+    Blue or purple veins → <b>Cool undertone</b><br><br>
 
-<h3>03 — The Sun Test</h3>
+    Green veins → <b>Warm undertone</b><br><br>
 
-Burns easily → <b>Cool undertone</b><br>
-Tans easily → <b>Warm undertone</b><br>
-Burns then tans → <b>Neutral undertone</b>
+    A mix of both → <b>Neutral undertone</b>
 
-</div>
-""", unsafe_allow_html=True)
+    </div>
+    """, unsafe_allow_html=True)
+
+# JEWELRY TEST
+with col2:
+
+    st.image(
+        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+        use_container_width=True
+    )
+
+    st.markdown("""
+    <div class="card">
+
+    <h3>02 — The Jewelry Test</h3>
+
+    Silver looks better → <b>Cool undertone</b><br><br>
+
+    Gold looks better → <b>Warm undertone</b><br><br>
+
+    Both look great → <b>Neutral undertone</b>
+
+    </div>
+    """, unsafe_allow_html=True)
+
+# SUN TEST
+with col3:
+
+    st.image(
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+        use_container_width=True
+    )
+
+    st.markdown("""
+    <div class="card">
+
+    <h3>03 — The Sun Test</h3>
+
+    Burns easily → <b>Cool undertone</b><br><br>
+
+    Tans easily → <b>Warm undertone</b><br><br>
+
+    Burns then tans → <b>Neutral undertone</b>
+
+    </div>
+    """, unsafe_allow_html=True)
 
 # ---------------- PACKAGES ----------------
 
 st.markdown('<div id="packages"></div>', unsafe_allow_html=True)
 
-st.markdown('<div class="section-title">Our Packages</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="section-title">Our Packages</div>',
+    unsafe_allow_html=True
+)
 
-packages = {
-    "Hue Starter":
-    "Basic body type analysis, skin undertone identification, and basic color suggestions.",
+packages = [
 
-    "Hue Discovery":
-    "Personal color palette analysis, body type analysis, and outfit suggestions based on your features.",
+    ("Hue Starter",
+     "Basic body type analysis, skin undertone identification, and basic color suggestions.",
+     "₹1499"),
 
-    "Style & Hue Package":
-    "Complete color analysis, body shape analysis, and personalized styling recommendations.",
+    ("Hue Discovery",
+     "Personal color palette analysis, body type analysis, and outfit suggestions based on your features.",
+     "₹1999"),
 
-    "Wardrobe Glow-Up":
-    "Closet evaluation, outfit combinations, and guidance on building a versatile wardrobe.",
+    ("Style & Hue Package",
+     "Complete color analysis, body shape analysis, and personalized styling recommendations.",
+     "₹2999"),
 
-    "Complete 360° Hue Experience":
-    "Full fashion analysis including color palette, body type, personal style report, and occasion-based styling tips."
-}
+    ("Wardrobe Glow-Up",
+     "Closet evaluation, outfit combinations, and guidance on building a versatile wardrobe.",
+     "₹4499"),
 
-for name, desc in packages.items():
+    ("Complete 360° Hue Experience",
+     "Full fashion analysis including color palette, body type, personal style report, and occasion-based styling tips.",
+     "₹6999")
+]
+
+for name, desc, price in packages:
 
     st.markdown(f"""
     <div class="package-card">
@@ -342,7 +399,7 @@ for name, desc in packages.items():
 
     <p>{desc}</p>
 
-    <b>💫 Price on Request</b>
+    <h2 style="color:#8a5238;">{price}</h2>
 
     </div>
     """, unsafe_allow_html=True)
