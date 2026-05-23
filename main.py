@@ -16,19 +16,24 @@ html, body, [class*="css"]  {
     font-family: 'Poppins', sans-serif;
 }
 
-.main {
+/* MAIN BACKGROUND */
+
+.stApp {
     background-color: #fffaf7;
 }
 
 /* HERO SECTION */
 
 .hero {
-    background: linear-gradient(135deg,#fff4ef,#ffe8f0);
+    background: linear-gradient(135deg,#ffe9e3,#fff0f5);
     padding: 60px;
     border-radius: 25px;
     text-align: center;
     margin-bottom: 50px;
+    color: #222;
 }
+
+/* TITLE */
 
 .hero-title {
     font-size: 65px;
@@ -36,40 +41,14 @@ html, body, [class*="css"]  {
     color: #7a4b37;
 }
 
+/* TAGLINE */
+
 .hero-tagline {
     font-size: 24px;
-    color: #555;
+    color: #444;
 }
 
-/* SECTION TITLES */
-
-.section-title {
-    font-size: 42px;
-    font-weight: bold;
-    color: #7a3e3e;
-    margin-top: 50px;
-    margin-bottom: 25px;
-}
-
-/* CARDS */
-
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 22px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
-    margin-bottom: 25px;
-}
-
-.package-card {
-    background: linear-gradient(135deg,#fff0f5,#fffaf0);
-    padding: 30px;
-    border-radius: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-}
-
-/* NAVIGATION */
+/* NAVBAR */
 
 .navbar {
     text-align:center;
@@ -79,9 +58,65 @@ html, body, [class*="css"]  {
 .navbar a {
     text-decoration:none;
     margin:15px;
-    color:#7a3e3e;
+    color:#7a3e3e !important;
     font-weight:bold;
     font-size:18px;
+}
+
+/* SECTION TITLE */
+
+.section-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #7a3e3e !important;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+/* CARD */
+
+.card {
+    background: white !important;
+    color: #222 !important;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+/* PACKAGE CARD */
+
+.package-card {
+    background: linear-gradient(135deg,#fff0f5,#fffaf0);
+    color: #222 !important;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+/* TEXT COLORS */
+
+.card h3,
+.card p,
+.card li,
+.card b,
+.package-card h3,
+.package-card p,
+.package-card b {
+    color: #222 !important;
+}
+
+/* STREAMLIT TEXT */
+
+p, li, span, div {
+    color: #222;
+}
+
+/* INPUTS */
+
+input, textarea {
+    color: black !important;
 }
 
 /* FOOTER */
@@ -89,7 +124,7 @@ html, body, [class*="css"]  {
 .footer {
     text-align:center;
     padding:30px;
-    color:gray;
+    color:#555;
     font-size:18px;
 }
 
