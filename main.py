@@ -290,20 +290,24 @@ The secret behind colors that make you glow?
 Your skin undertone helps you discover shades that naturally suit you.
 """)
 
+# 3 COLUMNS
 col1, col2, col3 = st.columns(3)
 
-# VEIN TEST
+# ---------------- VEIN TEST ----------------
+
 with col1:
 
     st.image(
-        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f",
-        use_container_width=True
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518",
+        width=320
     )
 
     st.markdown("""
     <div class="card">
 
     <h3>01 — The Vein Test</h3>
+
+    Look at the veins on your wrist in natural light.<br><br>
 
     Blue or purple veins → <b>Cool undertone</b><br><br>
 
@@ -314,18 +318,21 @@ with col1:
     </div>
     """, unsafe_allow_html=True)
 
-# JEWELRY TEST
+# ---------------- JEWELRY TEST ----------------
+
 with col2:
 
     st.image(
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
-        use_container_width=True
+        "https://images.unsplash.com/photo-1617038220319-276d3cfab638",
+        width=320
     )
 
     st.markdown("""
     <div class="card">
 
     <h3>02 — The Jewelry Test</h3>
+
+    Notice which jewelry enhances your look.<br><br>
 
     Silver looks better → <b>Cool undertone</b><br><br>
 
@@ -336,18 +343,21 @@ with col2:
     </div>
     """, unsafe_allow_html=True)
 
-# SUN TEST
+# ---------------- SUN TEST ----------------
+
 with col3:
 
     st.image(
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-        use_container_width=True
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+        width=320
     )
 
     st.markdown("""
     <div class="card">
 
     <h3>03 — The Sun Test</h3>
+
+    Think about how your skin reacts to sunlight.<br><br>
 
     Burns easily → <b>Cool undertone</b><br><br>
 
