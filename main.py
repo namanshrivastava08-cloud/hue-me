@@ -182,6 +182,10 @@ From understanding your personal color palette to building a style that reflects
 
 </div>
 """, unsafe_allow_html=True)
+st.image(
+        "https://images.unsplash.com/photo-1529139574466-a303027c1d8b",
+        use_container_width=True
+    )
 
 # ---------------- BODY TYPE ----------------
 
