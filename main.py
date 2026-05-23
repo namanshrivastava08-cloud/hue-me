@@ -345,8 +345,7 @@ with col2:
 # ---------------- SUN TEST ----------------
 
 with col3:
-
-   st.image(
+    st.image(
     "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
     width=320
 )
