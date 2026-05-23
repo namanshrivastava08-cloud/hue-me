@@ -130,7 +130,7 @@ Because every you has a perfect hue ✨
 """, unsafe_allow_html=True)
 
 st.image(
-    "/mnt/data/WhatsApp Image 2026-05-22 at 7.53.55 PM.jpeg",
+    "logo.jpeg",
     use_container_width=True
 )
 
@@ -160,7 +160,7 @@ Knowing your body type helps you choose clothes that fit better, flatter your sh
 """)
 
 st.image(
-    "/mnt/data/WhatsApp Image 2026-03-09 at 5.57.32 PM.jpeg",
+    "bodychart.jpeg",
     use_container_width=True
 )
 
