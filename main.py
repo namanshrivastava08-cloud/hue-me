@@ -16,10 +16,16 @@ html, body, [class*="css"]  {
     font-family: 'Poppins', sans-serif;
 }
 
-/* MAIN BACKGROUND */
+/* MAIN APP */
 
 .stApp {
     background-color: #fffaf7;
+}
+
+/* CENTER IMAGE */
+
+[data-testid="stImage"] {
+    text-align: center;
 }
 
 /* HERO SECTION */
@@ -33,19 +39,21 @@ html, body, [class*="css"]  {
     color: #222;
 }
 
-/* TITLE */
+/* HERO TITLE */
 
 .hero-title {
     font-size: 65px;
     font-weight: 700;
     color: #7a4b37;
+    margin-top: 20px;
 }
 
-/* TAGLINE */
+/* HERO TAGLINE */
 
 .hero-tagline {
     font-size: 24px;
     color: #444;
+    margin-top: 10px;
 }
 
 /* NAVBAR */
@@ -63,7 +71,7 @@ html, body, [class*="css"]  {
     font-size:18px;
 }
 
-/* SECTION TITLE */
+/* SECTION TITLES */
 
 .section-title {
     font-size: 42px;
@@ -73,7 +81,7 @@ html, body, [class*="css"]  {
     margin-bottom: 25px;
 }
 
-/* CARD */
+/* NORMAL CARD */
 
 .card {
     background: white !important;
@@ -107,7 +115,7 @@ html, body, [class*="css"]  {
     color: #222 !important;
 }
 
-/* STREAMLIT TEXT */
+/* GENERAL TEXT */
 
 p, li, span, div {
     color: #222;
@@ -129,19 +137,6 @@ input, textarea {
 }
 
 </style>
-""", unsafe_allow_html=True)
-
-# ---------------- NAVBAR ----------------
-
-st.markdown("""
-<div class="navbar">
-<a href="#home">Home</a>
-<a href="#bodytype">Body Type</a>
-<a href="#undertone">Skin Undertone</a>
-<a href="#packages">Packages</a>
-<a href="#appointment">Appointment</a>
-<a href="#about">About</a>
-</div>
 """, unsafe_allow_html=True)
 
 # ---------------- HOME ----------------
@@ -166,11 +161,6 @@ Because every you has a perfect hue ✨
 
 </div>
 """, unsafe_allow_html=True)
-
-st.image(
-    "logo.jpeg",
-    use_container_width=True
-)
 
 st.markdown("""
 <div class="card">
