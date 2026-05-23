@@ -32,30 +32,31 @@ html, body, [class*="css"]  {
 
 .hero {
     background: linear-gradient(135deg,#ffe9e3,#fff0f5);
-    padding: 70px 40px;
+    padding: 60px 40px;
     border-radius: 30px;
-    text-align: center;
     margin-bottom: 60px;
-    color: #222;
+    text-align: center;
 }
-
-/* HERO TITLE */
 
 .hero-title {
-    font-size: 65px;
+    font-size: 72px;
     font-weight: 700;
-    color: #7a4b37;
-    margin-top: 20px;
+    color: #8a5238;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
-
-/* HERO TAGLINE */
 
 .hero-tagline {
-    font-size: 24px;
+    font-size: 28px;
     color: #444;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
+/* CENTER STREAMLIT IMAGE */
+
+[data-testid="stImage"] {
+    text-align: center;
+}
 /* NAVBAR */
 
 .navbar {
@@ -147,29 +148,25 @@ st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="hero">
+
+<div style="text-align:center;">
 """, unsafe_allow_html=True)
 
-# CENTER LOGO
+# LOGO
+st.image(
+    "logo.jpeg",
+    width=220
+)
 
-col1, col2, col3 = st.columns([1,2,1])
-
-with col2:
-    st.image(
-        "logo.jpeg",
-        width=250
-    )
-
-# TITLE
-
+# TITLE + TAGLINE
 st.markdown("""
-<div class="hero-title">
-Hue & Me
-</div>
+<h1 class="hero-title">Hue & Me</h1>
 
-<div class="hero-tagline">
+<p class="hero-tagline">
 Because every you has a perfect hue ✨
-</div>
+</p>
 
+</div>
 </div>
 """, unsafe_allow_html=True)
 
