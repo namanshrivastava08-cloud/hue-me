@@ -148,11 +148,14 @@ st.markdown("""
 
 st.markdown('<div id="home"></div>', unsafe_allow_html=True)
 
+st.markdown('<div class="hero">', unsafe_allow_html=True)
+
+st.image(
+    "logo.jpeg",
+    width=220
+)
+
 st.markdown("""
-<div class="hero">
-
-<img src="https://i.imgur.com/u8VQZ4T.png" width="220">
-
 <div class="hero-title">
 Hue & Me
 </div>
